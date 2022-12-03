@@ -49,11 +49,11 @@
             padding-bottom: 2%;
             border-bottom: 2px solid black;
         }
+
         #dinnerPayment {
             background-color: #BF71EF;
             padding-bottom: 2%;
         }
-
     </style>
 </head>
 
@@ -72,6 +72,7 @@
         <div id="bmi">
             <h2>Индекс массы тела</h2>
             <p style="font-size: 125%;">Введите параметры</p>
+            <div class="container-fluid">
             <div class="row justify-content-around">
                 <div class="col-sm-4">
                     <p>Вес: <input id="weight"></p>
@@ -80,6 +81,7 @@
                     <p>Рост: <input id="helight"></p>
                 </div>
             </div>
+        </div>
             <p style="font-size: 125%;">Результат:</p>
             <div id="resultBMI" class="result"></div>
 
@@ -98,14 +100,20 @@
         </div>
         <div id="dinnerPayment">
             <h2>Кто оплачивает ужин?</h2>
-            <p style="font-size: 125%;">Введите параметры</p>
+            <p style="font-size: 125%;">Введите имена</p>
 
-            <p>Год: <input id="year"></p>
+            <p>
+                Имя: <input id="name">
+                <button type="button" onclick="BtnClick4()" id="button4" class="btn btn-outline-dark">Добавить</button>
+                <button type="button" onclick="BtnClick6()" id="button6" class="btn btn-outline-dark">Отчистить</button>
+            </p>
+            <p>Введенные имена:</p>
+            <div id="names" class="result"></div>
 
-            <p style="font-size: 125%;">Результат:</p>
-            <div id="resultLY" class="result"></div>
+            <p style="font-size: 125%;">Счет оплачивает:</p>
+            <div id="resultDP" class="result"></div>
 
-            <button type="button" onclick="BtnClick3()" id="button3" class="btn btn-outline-dark">Вычислить</button>
+            <button type="button" onclick="BtnClick5()" id="button5" class="btn btn-outline-dark">Вычислить</button>
         </div>
     </section>
 </body>

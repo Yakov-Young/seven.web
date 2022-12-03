@@ -6,21 +6,21 @@ function BtnClick1(){
     } else {
         resultLove.innerHTML = `Ошибка: Введите имена`;
     }
-    
+   
 }
-
+ 
 function Random() {
     return Math.round(Math.random() * 100);
 }
-
-
-
+ 
+ 
+ 
 function BtnClick2() {
     var helight = document.getElementById("helight");
     var weight = document.getElementById("weight");
-
+ 
     var temp = weight / Math.pow(helight, 2);
-
+ 
     if (temp <= 18.5) {
         resultBMI.innerHTML = "Недостаточный вес";
     } else if (25 >= temp > 18.5){
@@ -33,7 +33,7 @@ function BtnClick2() {
         resultBMI.innerHTML = "Проверьте введенные параметры";
     }
 }
-
+ 
 function BtnClick3() {
     var year = document.getElementById("year").value;
     resultLY.innerHTML = year;
@@ -44,4 +44,25 @@ function BtnClick3() {
     } else {
         resultLY.innerHTML = "Не високосный год";
     }
+}
+ 
+let arr = new Array();
+function BtnClick4() {
+    var a = document.getElementById("name").value;
+    arr.push(a);
+    names.innerHTML = arr;
+}
+ 
+function arrayRandElement(arr) {
+    var rand = Math.floor(Math.random() * arr.length);
+    return arr[rand];
+}
+ 
+function BtnClick5() {
+    resultDP.innerHTML = arrayRandElement(arr);
+}
+ 
+function BtnClick6() {
+    arr = [];
+    names.innerHTML = "";
 }
